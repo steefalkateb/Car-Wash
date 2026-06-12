@@ -4,7 +4,7 @@
 
  <tr>
     <td>
-      <img src="https://github.com/steefalkateb/Car-Wash/blob/main/src/assets/Screenshot%202026-06-09%20at%2011.27.51%20PM.png" width="200">
+      <img src="https://github.com/steefalkateb/Car-Wash/blob/main/src/assets/Screenshot%202026-06-09%20at%2011.27.51%20PM.png?raw=true" width="200">
     </td>
     <td>
       <img src="https://github.com/steefalkateb/Car-Wash/blob/main/src/assets/Screenshot%202026-06-09%20at%2011.29.00%20PM.png" width="200">
