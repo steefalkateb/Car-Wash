@@ -7,7 +7,8 @@
     </td>
    
     <td>
-      <img src="https://github.com/steefalkateb/Car-Wash/blob/main/src/assets/Screenshot%202026-06-09%20at%2011.29.00%20PM.png?raw=true">
+          <img src="https://github.com/steefalkateb/Car-Wash/blob/main/src/assets/Screenshot%202026-06-09%20at%2011.29.13%20PM.png" width="">
+
     </td>
 
    <td>
@@ -15,7 +16,7 @@
     </td>
     
     <td>
-      <img src="https://github.com/steefalkateb/Car-Wash/blob/main/src/assets/Screenshot%202026-06-09%20at%2011.29.30%20PM.png" width="" >
+      <img src="https://github.com/steefalkateb/Car-Wash/blob/main/src/assets/Screenshot%202026-06-09%20at%2011.29.13%20PM.png" width="">
     </td>
 </tr>
 
