@@ -1,0 +1,251 @@
+<ion-header>
+    <ion-navbar color="gray" hideBackButton>
+        <button class="navigation_hover" ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <span style="font-family: 'ERASDEMI' !important;color: #27a1c5 !important;font-size: 25px;">Massar</span>
+        <span style="font-family: 'ERASDEMI' !important;color: #ffffff">Car Wash</span>
+
+        <!-- https://achintyalabs.com/case-studies/car-wash -->
+        <!-- https://www.vervelogic.com/vl-car-wash-solution.html -->
+
+    </ion-navbar>
+
+    <ion-navbar color="gray" style="height: 68px">
+        <ion-grid>
+            <ion-row>
+
+                <ion-col col-3 col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 style="text-align: left; top: 5px">
+                    <img src="../../assets/imgs/gow.png" style="width: 60px;height:60px" />
+                </ion-col>
+
+                <ion-col col-3 col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 style="text-align: center;">
+                    <div style="color: #ffffff;font-family:  ERASDEMI;margin-top: 10px;">TOTAL INV</div>
+                    <span style="color: #27a1c5;font-size: 25px;font-weight: bold;">{{tot}}</span>
+                </ion-col>
+
+                <ion-col col-4 col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 style="text-align: center;">
+                    <div style="color: #ffffff;font-family:  ERASDEMI;margin-top: 10px;">COUNT ITEMS</div>
+                    <span style="color: #27a1c5;font-size: 25px;font-weight: bold;">{{cart}}</span>
+                </ion-col>
+
+            </ion-row>
+        </ion-grid>
+        <div style="height: 1px;background-color:#656564"></div>
+
+    </ion-navbar>
+
+
+    <!-- <ion-navbar color="gray">
+        <ion-scroll scrollX style="height:50px;">
+            <div class="scroll-item">
+                <ion-col col-33 *ngFor="let item of wash$ | async" (click)="onClick(item.name)">
+                    <div class="upper_toolbar ">
+                        <div style="font-size: 20px;margin-top: 10px" class="p_hover">{{item.name}}</div>
+                        <div style="height: 2px;background-color:#ffff1e"></div>
+                    </div>
+                </ion-col>
+            </div>
+        </ion-scroll>
+    </ion-navbar> -->
+
+
+
+
+
+
+    <!-- /////////////////////////////////////////////////////////// -->
+    <!-- <ion-toolbar color="gray">
+        <ion-segment [(ngModel)]="valve" color="light">
+            <ion-segment-button >
+*ngFor="let item of wash$ | async;let i=index;" value={{i}} (click)="onClick(item.name)"
+            </ion-segment-button>
+
+        </ion-segment>
+    </ion-toolbar> -->
+
+    <ion-toolbar color="gray">
+        <ion-segment color="lolo" [(ngModel)]="pet">
+
+            <ion-segment-button value="0" style="color:white;font-size: 20px;" (click)="onClick(group_1)" [ngClass]="{'group_hidden': (group_status_1==false),'group_show': (group_status_1==true)}">
+                {{group_1}}
+            </ion-segment-button>
+
+            <ion-segment-button value="1" style="color:white;font-size: 20px;" (click)="onClick(group_2)" [ngClass]="{'group_hidden': (group_status_2==false),'group_show': (group_status_2==true)}">
+                {{group_2}}
+            </ion-segment-button>
+
+            <ion-segment-button value="2" style="color:white;font-size: 20px;" (click)="onClick(group_3)" [ngClass]="{'group_hidden': (group_status_3==false),'group_show': (group_status_3==true)}">
+                {{group_3}}
+            </ion-segment-button>
+
+            <ion-segment-button value="3" style="color:white;font-size: 20px;" (click)="onClick(group_4)" [ngClass]="{'group_hidden': (group_status_4==false),'group_show': (group_status_4==true)}">
+                {{group_4}}
+            </ion-segment-button>
+
+            <ion-segment-button value="4" style="color:white;font-size: 20px;" (click)="onClick(group_5)" [ngClass]="{'group_hidden': (group_status_5==false),'group_show': (group_status_5==true)}">
+                {{group_5}}
+            </ion-segment-button>
+
+            <ion-segment-button value="5" style="color:white;font-size: 20px;" (click)="onClick(group_6)" [ngClass]="{'group_hidden': (group_status_6==false),'group_show': (group_status_6==true)}">
+                {{group_6}}
+            </ion-segment-button>
+
+            <ion-segment-button value="6" style="color:white;font-size: 20px;" (click)="onClick(group_7)" [ngClass]="{'group_hidden': (group_status_7==false),'group_show': (group_status_7==true)}">
+                {{group_7}}
+            </ion-segment-button>
+
+            <ion-segment-button value="7" style="color:white;font-size: 20px;" (click)="onClick(group_8)" [ngClass]="{'group_hidden': (group_status_8==false),'group_show': (group_status_8==true)}">
+                {{group_8}}
+            </ion-segment-button>
+
+            <ion-segment-button value="8" style="color:white;font-size: 20px;" (click)="onClick(group_9)" [ngClass]="{'group_hidden': (group_status_9==false),'group_show': (group_status_9==true)}">
+                {{group_9}}
+            </ion-segment-button>
+
+            <ion-segment-button value="9" style="color:white;font-size: 20px;" (click)="onClick(group_10)" [ngClass]="{'group_hidden': (group_status_10==false),'group_show': (group_status_10==true)}">
+                {{group_10}}
+            </ion-segment-button>
+
+        </ion-segment>
+
+
+        <!-- <ion-segment style="background:#3B6593">
+            <ion-segment-button style="color:white" icon-left>
+
+                <div style="margin-top: -20px !important; ">
+                    Heizöl
+                </div>
+            </ion-segment-button>
+            <ion-segment-button value="diesel_10" style=color:white>
+                <div style="margin-top: -20px !important; ">
+                    Diesel
+                </div>
+
+            </ion-segment-button>
+            <ion-segment-button value="benzin_e5" style=color:white>
+                <div style="margin-top: -20px !important; ">
+                    Benzin E5
+                </div>
+            </ion-segment-button>
+            <ion-segment-button value="benzin_e10" style=color:white>
+                <div style="margin-top: -20px !important; ">
+                    Benzin E10
+                </div>
+            </ion-segment-button>
+            <ion-segment-button value="benzin_e10" style=color:white>
+                <div style="margin-top: -20px !important; ">
+                    Benzin E10
+                </div>
+            </ion-segment-button>
+        </ion-segment> -->
+    </ion-toolbar>
+</ion-header>
+
+<br>
+<ion-content style="background-color: #eeeded;" fullscreen class="card-background-page">
+
+    <ion-grid>
+        <ion-row>
+            <ion-col *ngFor="let item of item$ | async" class="col-50" col-6 col-xs-12 col-sm-6 col-md-3 col-lg-3 col-xl-3 no-padding>
+                <ion-card class="card_all">
+                    <ion-card-header>
+                        <!-- https://forum.ionicframework.com/t/card-design/94051/16 -->
+                        <ion-row justify-content-between>
+                            <ion-col col-auto style="width:auto">
+                                <img style="width: 90px;height: 60px;" src={{item.image}} item-left/>
+                            </ion-col>
+                            <br>
+                            <ion-col>
+                                <div style="float: right;">
+                                    <h2> {{ item.name }}</h2>
+                                </div>
+                                <br>
+                                <div style="float: right;">
+                                    {{item.price}}
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        <button style="height: 30px; background-color: #27a1c5" ion-button full (click)="add(item)">Add اضافة</button>
+                    </ion-card-header>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-fab right bottom>
+        <button ion-fab color="lolo" (click)="purchases()" id="cart-btn">
+                        <ion-icon name="ios-cart-outline" style="font-size: 50px;"></ion-icon>
+        </button>
+    </ion-fab>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <p class="hidenn ">hgjjjjjjjjjjg</p>
+    <div class="div25 ">
+        <ion-grid>
+            <ion-row>
+                <ion-col col-sm-10 col-xl-10 col-md-10 col-lg-10>
+                    <ion-card *ngFor="let item of wash$ | async " (click)="onClick(item.name) ">
+                        <ion-item text-center>
+                            <ion-avatar class="custom-avatar ">
+                                <img src={{item.imgurl}}>
+                            </ion-avatar>
+                            <h2>{{ item.name }}</h2>
+                        </ion-item>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+
+    <div class="div75 ">
+        <ion-grid>
+            <ion-row>
+                <ion-col col-4 class="hidden-md " *ngFor="let item of item$ | async " col-sm-4 col-xl-4 col-md-4 col-lg-4>
+                    <ion-card (click)="buy(item) ">
+                        <ion-item>
+                            <h2>Ex : {{ item.name }}</h2>
+                            <p>Tours : {{ item.price }}</p>
+                        </ion-item>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <ion-buttons start>
+            <button ion-button icon-only onclick="javascript:window.print() ">print
+          <ion-icon name="cart "></ion-icon>
+        </button>
+        </ion-buttons>
+
+    </div>
+    <br> -->
+    <ion-col col-sm-1 col-xl-1 col-md-1 col-lg-1 style="visibility: hidden;" *ngFor="let item of wash$ | async">
+        {{item.name}}
+    </ion-col>
+
+
+
+
+</ion-content>

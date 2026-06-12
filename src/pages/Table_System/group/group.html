@@ -1,0 +1,131 @@
+<ion-header>
+    <ion-navbar color="gray">
+        <button class="navigation_hover" ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+        <ion-buttons end>
+            <button ion-button (click)="save(name)" style="color:  #f5f5f5;font-weight: bold;font-family: Arial" clear>Save</button>
+        </ion-buttons>
+
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content fullscreen style="background-color: #eeeded;">
+    <br>
+    <ion-item>
+        <ion-label>Name : </ion-label>
+        <ion-input [(ngModel)]="name"></ion-input>
+    </ion-item>
+    <br>
+
+    <ngx-datatable class="fullscreen" [ngClass]="tablestyle" [rows]="wash$ | async" [columnMode]="'flex'" [loadingIndicator]="loading" [sortType]="'multi'" [reorderable]="false" [rowHeight]="50" [headerHeight]="50" [summaryPosition]="'top'">
+        <!-- <ngx-datatable-column name="Name" [flexGrow]="3"></ngx-datatable-column> -->
+
+        <ngx-datatable-column [flexGrow]="3">
+            <ng-template ngx-datatable-header-template>
+                <span style="margin-left: 10px">Name</span>
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <span style="margin-left: 10px"> {{row.name}} </span>
+            </ng-template>
+        </ngx-datatable-column>
+
+
+        <!-- https://devdactic.com/ionic-datatable-ngx-datatable/ -->
+        <!-- https://github.com/swimlane/ngx-datatable/issues/630 -->
+        <!-- https://stackoverflow.com/questions/48906898/set-fixed-height-for-ngx-datatable-in-angular-4 -->
+
+        <ngx-datatable-column [resizeable]="false" [flexGrow]="0.4" [sortable]="false">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <ion-buttons end>
+                    <button no-margin ion-button full large style="color: #757575; background-color: transparent" (click)="edit(row)" class="btn_col">
+                                      <ion-icon ios="ios-create" md="md-create"></ion-icon>
+                                    </button>
+                </ion-buttons>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [resizeable]="false" [flexGrow]="0.5" [sortable]="false" style="background-color: cadetblue">
+
+
+
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <button no-margin ion-button full large style="color: #757575;  background-color: transparent" (click)="delete_group(row)" class="btn_col">
+                                  <ion-icon name="md-trash"></ion-icon>
+                                </button>
+            </ng-template>
+
+            <ng-template ngx-datatable-header-template>
+                <!-- <ion-buttons end> -->
+                <ion-icon name="bulb" style="font-size: 30px;" (click)="switchStyle()"></ion-icon>
+                <!-- </ion-buttons> -->
+            </ng-template>
+        </ngx-datatable-column>
+    </ngx-datatable>
+
+
+    <!-- <ion-grid class="grid" text-center>
+        <ion-row justify-content-center>
+            <ion-col col-sm-2 col-xl-1 col-md-1 col-lg-1 class="header">
+                <div>
+                    No.
+                </div>
+            </ion-col>
+            <ion-col col-sm-4 col-xl-4 col-md-4 col-lg-4 class="header">
+                <div>
+                    Name
+                </div>
+            </ion-col>
+            <ion-col col-sm-2 col-xl-1 col-md-1 col-lg-1 class="header">
+                <div>
+                    Edit
+                </div>
+            </ion-col>
+            <ion-col col-sm-2 col-xl-1 col-md-1 col-lg-1 class="header">
+                <div>
+                    Del
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row *ngFor="let item of wash$ | async;index as i" justify-content-center>
+            <ion-col col-sm-2 col-xl-1 col-md-1 col-lg-1>
+                <div>
+                    {{i+1}}
+                </div>
+            </ion-col>
+            <ion-col col-sm-4 col-xl-4 col-md-4 col-lg-4>
+                <div>
+                    {{item.name}}
+                </div>
+            </ion-col>
+            <ion-col col-sm-2 col-xl-1 col-md-1 col-lg-1 text-center>
+                <div>
+                    <button ion-button small color="secondary" (click)="edit(item)">
+            <ion-icon name="create"></ion-icon>
+          </button>
+                </div>
+            </ion-col>
+            <ion-col col-sm-2 col-xl-1 col-md-1 col-lg-1 text-center>
+                <div>
+                    <button ion-button small color="danger" (click)="delete_group(item)">
+            <ion-icon name="trash"></ion-icon>
+          </button>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+    <ion-row class="hidenn" *ngFor="let item of item$ | async;index as i" justify-content-center>
+        <ion-col col-sm-2 col-xl-1 col-md-1 col-lg-1>
+            <div>
+                {{item.name}}
+            </div>
+        </ion-col>
+    </ion-row> -->
+
+
+</ion-content>

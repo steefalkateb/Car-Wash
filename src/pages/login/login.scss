@@ -1,0 +1,59 @@
+page-login {
+    .myview {
+        background-image: url("/assets/imgs/car_wash_back - Copy.png") !important;
+        /* Full height */
+        height: 100%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat !important;
+        background-size: cover;
+    }
+    .name_car {
+        color: #27a1c5;
+        font-family: "ERASLGHT" !important;
+        font-size: 25px;
+        margin-top: -9px;
+    }
+    .name_wash {
+        color: #c4c3c3 !important;
+        font-family: "ERASDEMI" !important;
+        font-size: 40px;
+    }
+    //////////////////
+    .numberCircle {
+        // https://stackoverflow.com/questions/4861224/how-to-use-css-to-surround-a-number-with-a-circle
+        border-radius: 50%;
+        behavior: url(PIE.htc);
+        width: 50px;
+        height: 50px;
+        padding: 8px;
+        background: Transparent;
+        border: 2px solid #666;
+        color: rgb(216, 215, 215);
+        text-align: center;
+        font: 32px Arial, sans-serif;
+        margin: 10px 0 10px 0;
+    }
+    #box {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: auto;
+        // border: 1px solid rgb(216, 215, 215);
+    }
+    #input {
+        font-size: 25px;
+        background-color: transparent;
+        color: #d2504d;
+        text-align: center;
+    }
+    ////////////////
+    .hidenn {
+        visibility: hidden;
+        // background-color: #d2504d;
+        // width: 300px;
+        // height: 100px;
+    }
+}

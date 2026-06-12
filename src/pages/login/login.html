@@ -1,0 +1,210 @@
+<ion-content fullscreen class="myview">
+    <div id="box" style="text-align: center">
+        <div>
+            <img src="../../assets/imgs/png_wash.png" style="width: 180px; display: block;
+            margin-left: auto;
+            margin-right: auto;" />
+        </div>
+
+        <div class="name_wash">MASSAR</div>
+        <div class="name_car">Car Wash</div>
+
+        <ion-input id="input" disabled="disabled" text-center type="password" [(ngModel)]="password"></ion-input>
+
+        <div style="background-color: rgba(0, 0, 0, 0.308);
+                border-radius: 8%;">
+
+            <ion-grid text-center>
+                <ion-row>
+                    <ion-col col-sm-4 col-xl-4 col-md-4 col-lg-4>
+
+                        <button ion-button round (click)="number('1')" class="numberCircle">1</button>
+                    </ion-col>
+                    <ion-col col-sm-4 col-xl-4 col-md-4 col-lg-4>
+                        <button ion-button round (click)="number('2')" class="numberCircle">2</button>
+                    </ion-col>
+                    <ion-col col-sm-4 col-xl-4 col-md-4 col-lg-4>
+                        <button ion-button round (click)="number('3')" class="numberCircle">3</button>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+
+                    <ion-col col-sm-4 col-xl-4 col-md-4 col-lg-4>
+                        <button ion-button round (click)="number('4')" class="numberCircle">4</button>
+                    </ion-col>
+                    <ion-col col-sm-4 col-xl-4 col-md-4 col-lg-4>
+                        <button ion-button round (click)="number('5')" class="numberCircle">5</button>
+                    </ion-col>
+                    <ion-col col-sm-4 col-xl-4 col-md-4 col-lg-4>
+                        <button ion-button round (click)="number('6')" class="numberCircle">6</button>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+
+                    <ion-col col-sm-4 col-xl-4 col-md-4 col-lg-4>
+                        <button ion-button round (click)="number('7')" class="numberCircle">7</button>
+                    </ion-col>
+                    <ion-col col-sm-4 col-xl-4 col-md-4 col-lg-4>
+                        <button ion-button round (click)="number('8')" class="numberCircle">8</button>
+                    </ion-col>
+                    <ion-col col-sm-4 col-xl-4 col-md-4 col-lg-4>
+                        <button ion-button round (click)="number('9')" class="numberCircle">9</button>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col col-sm-4 col-xl-4 col-md-4 col-lg-4>
+                        <button ion-button round (click)="clear()" class="numberCircle" style="font-size: 20px">
+                                    <ion-icon name="arrow-back"></ion-icon>
+                                </button>
+                    </ion-col>
+                    <ion-col col-sm-4 col-xl-4 col-md-4 col-lg-4>
+                        <button ion-button round (click)="number('0')" class="numberCircle">0</button>
+                    </ion-col>
+                    <ion-col col-sm-4 col-xl-4 col-md-4 col-lg-4>
+                        <button ion-button round (click)="ok(user)" class="numberCircle" style="font-size: 20px">Ok</button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </div>
+
+
+
+</ion-content>
+<!-- <button ion-button round (click)="one()" class="numberCircle">1</button> -->
+
+<!-- <br> <br> <br>
+            <br> <br> <br> -->
+
+<!-- <ion-item class="aaa">
+                <ion-label></ion-label>
+                <ion-input type="password" [(ngModel)]="password"></ion-input>
+            </ion-item> -->
+
+<!-- <br> <br> <br> -->
+
+<!-- <div class="item images-parent"> -->
+<!-- <img src="img/carryout-icon.jpg" class="left-image"> -->
+<!-- <img src="./assets/imgs/logoo.png" class="center-image"> -->
+<!-- <img src="img/delivery-icon.jpg" class="right-image"> -->
+<!-- </div> -->
+
+<!-- <br> <br> <br> -->
+
+<!-- <ion-grid text-center>
+                <ion-row justify-content-center>
+                    <ion-col col-sm-1 col-xl-1 col-md-1 col-lg-1>
+                        <div>
+                            <button ion-button round (click)="one()">
+                    1
+                  </button>
+                        </div>
+                    </ion-col>
+                    <ion-col col-sm-2 col-xl-2 col-md-2 col-lg-2>
+                        <div>
+                            <ion-buttons>
+                                <button ion-button round (click)="two()">
+                      2
+                    </button>
+                            </ion-buttons>
+                        </div>
+                    </ion-col>
+                    <ion-col col-sm-1 col-xl-1 col-md-1 col-lg-1>
+                        <div>
+                            <ion-buttons>
+                                <button ion-button round (click)="three()">
+                      3
+                    </button>
+                            </ion-buttons>
+                        </div>
+                    </ion-col>
+                </ion-row>
+        
+                <ion-row justify-content-center>
+                    <ion-col col-sm-1 col-xl-1 col-md-1 col-lg-1>
+                        <div>
+                            <button ion-button round (click)="four()">
+                    4
+                  </button>
+                        </div>
+                    </ion-col>
+                    <ion-col col-sm-2 col-xl-2 col-md-2 col-lg-2>
+                        <div>
+                            <ion-buttons>
+                                <button ion-button round (click)="five()">
+                      5
+                    </button>
+                            </ion-buttons>
+                        </div>
+                    </ion-col>
+                    <ion-col col-sm-1 col-xl-1 col-md-1 col-lg-1>
+                        <div>
+                            <ion-buttons>
+                                <button ion-button round (click)="six()">
+                      6
+                    </button>
+                            </ion-buttons>
+                        </div>
+                    </ion-col>
+                </ion-row>
+        
+        
+                <ion-row justify-content-center>
+                    <ion-col col-sm-1 col-xl-1 col-md-1 col-lg-1>
+                        <div>
+                            <button ion-button round (click)="seven()">
+                    7
+                  </button>
+                        </div>
+                    </ion-col>
+                    <ion-col col-sm-2 col-xl-2 col-md-2 col-lg-2>
+                        <div>
+                            <ion-buttons>
+                                <button ion-button round (click)="eight()">
+                      8
+                    </button>
+                            </ion-buttons>
+                        </div>
+                    </ion-col>
+                    <ion-col col-sm-1 col-xl-1 col-md-1 col-lg-1>
+                        <div>
+                            <ion-buttons>
+                                <button ion-button round (click)="nine()">
+                      9
+                    </button>
+                            </ion-buttons>
+                        </div>
+                    </ion-col>
+                </ion-row>
+        
+        
+                <ion-row justify-content-center>
+                    <ion-col col-sm-1 col-xl-1 col-md-1 col-lg-1>
+                        <div>
+                            <button ion-button round (click)="clear()">
+                    claer
+                  </button>
+                        </div>
+                    </ion-col>
+                    <ion-col col-sm-2 col-xl-2 col-md-2 col-lg-2>
+                        <div>
+                            <ion-buttons>
+                                <button ion-button round (click)="zero()">
+                      0
+                    </button>
+                            </ion-buttons>
+                        </div>
+                    </ion-col>
+                    <ion-col col-sm-1 col-xl-1 col-md-1 col-lg-1>
+                        <div>
+                            <ion-buttons>
+                                <button ion-button round (click)="ok()">
+                      ok
+                    </button>
+                            </ion-buttons>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid> -->

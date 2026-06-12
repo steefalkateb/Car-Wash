@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-navbar color="gray">
+        <ion-title>Edit</ion-title>
+        <ion-buttons start>
+            <button ion-button icon-only (click)="closeModal()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color: #eeeded;">
+    <!-- <form (ngSubmit)="update()"> -->
+
+    <ion-item>
+        <ion-label>Price : {{price}} </ion-label>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Total : {{total}}</ion-label>
+    </ion-item>
+
+    <br><br>
+
+    <ion-grid text-center>
+        <ion-row justify-content-center>
+            <ion-col col-sm-1 col-xl-1 col-md-1 col-lg-1>
+                <div>
+                    <ion-buttons start>
+                        <button ion-button icon-only (click)="minus()">
+              <ion-icon name="remove-circle"></ion-icon>
+            </button>
+                    </ion-buttons>
+                </div>
+            </ion-col>
+            <ion-col col-sm-2 col-xl-2 col-md-2 col-lg-2>
+                <div>
+                    <ion-item>
+                        <ion-label style="font-size: 20px" text-center> {{qty}} </ion-label>
+                    </ion-item>
+                </div>
+            </ion-col>
+            <ion-col col-sm-1 col-xl-1 col-md-1 col-lg-1>
+                <div>
+                    <ion-buttons end>
+                        <button ion-button icon-only (click)="plus()">
+              <ion-icon name="add-circle"></ion-icon>
+            </button>
+                    </ion-buttons>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <button ion-button block (click)="update()">Update</button>
+
+    <!-- </form> -->
+</ion-content>

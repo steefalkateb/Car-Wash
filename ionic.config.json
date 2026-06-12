@@ -1,0 +1,7 @@
+{
+  "name": "washes",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

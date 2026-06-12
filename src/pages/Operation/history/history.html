@@ -1,0 +1,188 @@
+<ion-header>
+
+    <ion-navbar color="gray">
+        <button class="navigation_hover" ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+        <ion-buttons end>
+            <button ion-button (click)="view()" style="color:  #f5f5f5;font-weight: bold;font-family: Arial" clear>View</button>
+        </ion-buttons>
+
+        <ion-buttons end>
+            <button ion-button (click)="get_data()" style="color:  #f5f5f5;font-weight: bold;font-family: Arial" clear>Print</button>
+        </ion-buttons>
+
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content fullscreen style="background-color: #eeeded;">
+    <br>
+    <ion-item>
+        <ion-label>Code : </ion-label>
+        <ion-input type="number" [(ngModel)]="code_number"></ion-input>
+    </ion-item>
+
+    <br>
+    <ngx-datatable class="fullscreen" [ngClass]="tablestyle" [rows]="sales_item$ | async" [columnMode]="'flex'" [scrollbarH]="true" [loadingIndicator]="loading" [sortType]="'multi'" [reorderable]="false" [rowHeight]="50" [headerHeight]="50" [summaryPosition]="'top'">
+        <ngx-datatable-column [flexGrow]="0.5" [minWidth]="70">
+
+            <ng-template ngx-datatable-header-template>
+                <span style="margin-left: 10px">Code</span>
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <span style="margin-left: 10px"> {{row.code}} </span>
+
+            </ng-template>
+
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [flexGrow]="1.5" [minWidth]="150">
+            <ng-template ngx-datatable-header-template>
+                <span>Item Name </span>
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <span> {{row.itemname}} </span>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [flexGrow]="0.4" [minWidth]="50">
+            <ng-template ngx-datatable-header-template>
+                <span>Qty</span>
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <span> {{row.qty}} </span>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [flexGrow]="0.4" [minWidth]="50">
+            <ng-template ngx-datatable-header-template>
+                <span>Price</span>
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <span> {{row.price}} </span>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [flexGrow]="0.4" [minWidth]="50">
+            <ng-template ngx-datatable-header-template>
+                <span>Total</span>
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <span> {{row.total}} </span>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [flexGrow]="1" [minWidth]="150">
+            <ng-template ngx-datatable-header-template>
+                <span>Group Name</span>
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <span> {{row.groupname}} </span>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [resizeable]="false" [flexGrow]="0.5" [sortable]="false" [minWidth]="50">
+            <ng-template ngx-datatable-header-template>
+                <ion-icon name="bulb" style="font-size: 30px" (click)="switchStyle()"></ion-icon>
+            </ng-template>
+        </ngx-datatable-column>
+    </ngx-datatable>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 
+    <ngx-datatable [scrollbarV]="true" [scrollbarH]="true" class="fullscreen" [scrollbarH]="true" [ngClass]="tablestyle" [rows]="sales_item$ | async" [columnMode]="'flex'" [loadingIndicator]="loading" [sortType]="'multi'" [reorderable]="false" [rowHeight]="50"
+        [headerHeight]="50" [summaryPosition]="'top'">
+        <ngx-datatable-column [flexGrow]="0.4" [minWidth]="120">
+            <ng-template ngx-datatable-header-template>
+                <span>Code</span>
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <span> {{row.code}} </span>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [flexGrow]="1" [minWidth]="120">
+            <ng-template ngx-datatable-header-template>
+                <span>Item Name</span>
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <span> {{row.itemname}} </span>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [flexGrow]="0.4" [minWidth]="120">
+            <ng-template ngx-datatable-header-template>
+                <span>Qty</span>
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <span> {{row.qty}} </span>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [flexGrow]="0.4" [minWidth]="120">
+            <ng-template ngx-datatable-header-template>
+                <span>Price</span>
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <span> {{row.price}} </span>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [flexGrow]="0.4" [minWidth]="120">
+            <ng-template ngx-datatable-header-template>
+                <span>Total</span>
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <span> {{row.total}} </span>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [flexGrow]="1" [minWidth]="120">
+            <ng-template ngx-datatable-header-template>
+                <span>Group Name</span>
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <span> {{row.groupname}} </span>
+            </ng-template>
+        </ngx-datatable-column> -->
+
+
+    <!-- <ngx-datatable-column name="Code" [flexGrow]="0.4"></ngx-datatable-column>
+        <ngx-datatable-column name="Itemname" [flexGrow]="1"> </ngx-datatable-column>
+        <ngx-datatable-column name="Qty" [flexGrow]="0.4"></ngx-datatable-column>
+        <ngx-datatable-column name="Price" [flexGrow]="0.4"></ngx-datatable-column>
+        <ngx-datatable-column name="Total" [flexGrow]="0.4"></ngx-datatable-column>
+        <ngx-datatable-column name="Groupname" [flexGrow]="1"></ngx-datatable-column> -->
+    <!-- https://devdactic.com/ionic-datatable-ngx-datatable/ -->
+    <!-- https://github.com/swimlane/ngx-datatable/issues/630 -->
+    <!-- https://stackoverflow.com/questions/48906898/set-fixed-height-for-ngx-datatable-in-angular-4 -->
+
+
+
+
+
+
+
+
+</ion-content>

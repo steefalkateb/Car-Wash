@@ -1,0 +1,125 @@
+<ion-header>
+    <ion-navbar color="gray">
+        <button class="navigation_hover" ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+        <ion-buttons end>
+            <button ion-button (click)="save()" style="color:  #f5f5f5;font-weight: bold;font-family: Arial" clear>Save</button>
+        </ion-buttons>
+
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content fullscreen style="background-color: #eeeded;">
+
+
+    <ion-grid>
+        <ion-row wrap>
+            <ion-col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 class="col-50" style="background-color: #fbfbfb;">
+                <div class="img_btn">
+                    <img [src]="path_image" class="img">
+                    <button full ion-button (click)="select_img()" style="display:block;text-transform: none;font-size: 15px;background-color: #227da0;height: 30px;">
+                                    Browse</button>
+                </div>
+
+            </ion-col>
+
+
+            <!-- <ion-col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 class="col-50" style="border: 1px solid #b0b4b5; border-radius: 1%;height: 525px;background-color: #fbfbfb;"> -->
+            <!-- <div style="width: 100%;"> -->
+            <ion-col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 class="col-50" style="border: 1px solid #b0b4b5; border-radius: 1%;;background-color: #fbfbfb;">
+
+                <div>
+
+                    <ion-item class="div25">
+                        <ion-label>Database Name : </ion-label>
+                        <!-- <ion-input disabled="true" type="text" [(ngModel)]="Database_name"></ion-input> -->
+                        <ion-input type="text" [(ngModel)]="Database_name"></ion-input>
+                    </ion-item>
+
+
+                    <ion-buttons class="div_right25" style="position: relative;">
+                        <button ion-button class="btn_class" (click)="select_data()">Select Database</button>
+                    </ion-buttons>
+
+                    <ion-item>
+                        <ion-label>Company Name : </ion-label>
+                        <ion-input type="text" [(ngModel)]="company_name_2"></ion-input>
+                    </ion-item>
+
+                    <ion-item class="div25">
+                        <ion-label>Printer Name : </ion-label>
+                        <ion-input disabled="true" type="text" [(ngModel)]="Printer_name"></ion-input>
+                    </ion-item>
+
+
+                    <ion-buttons class="div_right25" style="position: relative;">
+                        <button ion-button (click)="listBTDevice()" class="btn_class">Select Printer</button>
+                    </ion-buttons>
+
+                    <ion-item class="div25">
+                        <ion-label style="color: #999999">Number of Copies : </ion-label>
+                        <!-- <ion-input disabled="true" [(ngModel)]="number_copies">{{number_copies}}</ion-input> -->
+                        <ion-input [(ngModel)]="number_copies">{{number_copies}}</ion-input>
+
+                    </ion-item>
+
+
+
+                    <ion-grid class="div_right25">
+
+                        <ion-row>
+                            <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4>
+                                <button ion-button icon-only (click)="minus()" clear><ion-icon style="color: #227da0" name="remove-circle"></ion-icon></button>
+                            </ion-col>
+
+                            <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4>
+                                <ion-input [(ngModel)]="number_copies" text-center style="font-size: 20px;bottom: 5px;margin-left: 10px;width: 30px;">{{number_copies}}</ion-input>
+
+                            </ion-col>
+
+                            <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4>
+                                <button ion-button icon-only (click)="plus()" clear><ion-icon style="color: #227da0;" name="add-circle"></ion-icon></button>
+                            </ion-col>
+
+                        </ion-row>
+                    </ion-grid>
+
+                    <ion-item>
+                        <ion-label style=" color: #999999">Add tax button</ion-label>
+                        <ion-toggle color="MMM" [(ngModel)]="add_tax_button_1 "></ion-toggle>
+                    </ion-item>
+
+                    <ion-item style="margin-top:8px">
+                        <ion-label>Vat id : </ion-label>
+                        <ion-input type="text" [(ngModel)]="vat_id"></ion-input>
+                    </ion-item>
+
+
+                    <ion-item style="margin-top: 8px">
+                        <ion-label>Line 1 : </ion-label>
+                        <ion-input type="text" [(ngModel)]="line_1"></ion-input>
+                    </ion-item>
+
+                    <ion-item style="margin-top: 8px">
+                        <ion-label>Line 2 : </ion-label>
+                        <ion-input type="text" [(ngModel)]="line_2"></ion-input>
+                    </ion-item>
+
+                </div>
+            </ion-col>
+
+
+        </ion-row>
+
+    </ion-grid>
+    <!-- <ion-row class="hidenn" *ngFor="let item of user$ | async;index as i" justify-content-center>
+        <ion-col col-sm-2 col-xl-1 col-md-1 col-lg-1>
+            <div>
+                {{item.name}}
+            </div>
+        </ion-col>
+    </ion-row> -->
+</ion-content>

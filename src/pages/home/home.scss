@@ -1,0 +1,237 @@
+page-home {
+    // font-family: 'ERASMD' !important;
+    font-family: "Hacen Tunisia Lt";
+    ion-col.my-thin-col {
+        flex: 0 0 4px;
+        padding: 0;
+    }
+    //   https://stackblitz.com/edit/ionic-rii3yt?file=pages%2Fhome%2Fhome.html
+    // @media (min-width: 768px) and (max-width:991px) {
+    //   .hidden-md {
+    //     display: none;
+    //   }
+    // }
+    .div25 {
+        // background:grey;
+        width: 25%;
+        padding-top: 0%;
+        float: left;
+        margin: 1%;
+    }
+    .div75 {
+        // background:grey;
+        width: 70%;
+        padding-top: 0%;
+        float: left;
+        margin: 1%;
+    }
+    // .custom-avatar {
+    //  background-image: url("../../assets/icon/favicon.ico");
+    //     border: 1px solid #fff;
+    //     border-radius: 50%;
+    //     display: inline-block;
+    //     width: 50px !important;
+    //     height: 50px !important;
+    //     border-radius: 50%;
+    //   }
+    .custom-avatar {
+        // background-image: url("../../assets/icon/favicon.ico")!important;
+        background-color: royalblue !important;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+    #cart-btn {
+        // position: relative;
+        // width: 42px;
+        top: 5px;
+        right: 1px;
+        overflow: visible !important;
+    }
+    #cart-badge {
+        background-color: transparent;
+        position: absolute;
+        // top: -3px;
+        // right: -3px;
+        top: 14px;
+        right: 14px;
+        border-radius: 100%;
+        color: #a30a0a;
+        font-weight: bold;
+        font-family: "Arial";
+    }
+    .hidenn {
+        visibility: hidden;
+    }
+    .ssss {
+        flex: 0 0 50px;
+    }
+    @media print {
+        ion-header {
+            display: none !important;
+        }
+        .div25 {
+            display: none !important;
+        }
+        .hidenn {
+            visibility: visible;
+        }
+        body,
+        .app-root,
+        .split-pane,
+        .ion-page,
+        ion-app,
+        ion-nav {
+            contain: none;
+        }
+        body,
+        ion-nav {
+            overflow: initial;
+        }
+        body {
+            position: static;
+        }
+        [ion-content-print] {
+            overflow-y: visible !important;
+            position: relative;
+        }
+    }
+    ////////////////////////////////////////////////////////
+    ion-scroll[scrollX] {
+        white-space: nowrap;
+        .scroll-item_ios {
+            display: inline-block;
+        }
+         ::-webkit-scrollbar {
+            display: none !important;
+        }
+    }
+    .upper_toolbar_ios {
+        display: inline-block;
+        padding: 0 25px 0 7px;
+        position: relative;
+        bottom: 10px;
+    }
+    .md scroll-content {
+        overflow-y: auto;
+    }
+    .select-icon-inner {
+        color: #f5f5f5 !important;
+    }
+    .span_title {
+        color: #f5f5f5;
+        font-weight: bold;
+        // text-shadow: 0px 1px 1px #c8c8c8;
+        // text-shadow: 0px 1px 1px #c8c8c873;
+        background-clip: text;
+        padding-left: 8px;
+        padding-top: 4px;
+        // font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+        // font-size: 25px;
+        font-size: 20px;
+        font-family: "Hacen Tunisia Lt" !important;
+    }
+    .logo {
+        background-image: url("../../assets/icon/logo.png");
+        float: left;
+    }
+    // .hcs {
+    //   display: flex;
+    //   flex-direction: row;
+    //   align-items: center;
+    //   padding-top: 6px;
+    // }
+    // .logo {
+    //   background-image: url("../../assets/icon/logo.png");
+    //   float: left;
+    // }
+    // .select_box {
+    //   float: left;
+    //   margin-top: 15px;
+    //   margin-right: 20px;
+    // }
+    // ion-segment-button.segment-button {
+    //   display: inline-block;
+    //   min-width: 100px;
+    //   width: auto;
+    //   border: none;
+    // }
+    .upper_toolbar {
+        display: inline-block;
+        padding: 0 25px 0 7px;
+        position: relative;
+        bottom: 10px;
+        font-family: "Hacen Tunisia Lt";
+        color: #f5f5f5;
+    }
+    // .p_hover:hover {
+    //     // color: #227da0;
+    //     color: #1ea4cd;
+    // }
+    .p_hover:focus,
+    .p_hover:active {
+        // text-decoration: underline;
+        // display: inline-block;
+        border-bottom: 1px solid #00c;
+    }
+    ion-segment {
+        display: block;
+        white-space: nowrap;
+        font-size: 0;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+        ion-segment-button.segment-button {
+            display: inline-block !important;
+            min-width: 100px !important;
+            width: auto !important;
+        }
+    }
+    // ion-scroll[scrollX] {
+    //   white-space: nowrap;
+    //   .scroll-item {
+    //     display: inline-block;
+    //   }
+    //   ::-webkit-scrollbar {
+    //     display: none !important;
+    //   }
+    // }
+    ion-row {
+        ion-card {
+            width: 100% !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            margin-top: 1px !important;
+            margin-bottom: 1px !important;
+            img {
+                width: 100%;
+            }
+            ion-label {
+                margin: 0;
+            }
+        }
+    }
+    .col-50 {
+        display: flex;
+        padding: 8px;
+    }
+    .card_all {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 5px;
+        // background-color: rgba(0, 0, 0, 0.300);
+        background-color: #f7f7f7;
+    }
+    /////////////////////////////////////
+    .group_hidden {
+        visibility: hidden;
+    }
+    .group_show {
+        visibility: visible;
+    }
+}

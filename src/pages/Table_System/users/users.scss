@@ -1,0 +1,64 @@
+page-users {
+    font-family: "Hacen Tunisia Lt";
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    .btn_col {
+        box-shadow: none;
+        height: 45px;
+        bottom: 2px;
+    }
+    // https://forum.ionicframework.com/t/ion-input-green-line-when-type-number/69750/2
+    .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+    .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+        border-bottom-color: transparent;
+        box-shadow: inset 0 -1px 0 0 #dedede;
+    }
+    .item-md.item-input.input-has-focus .item-inner {
+        box-shadow: none;
+    }
+    //////////////////////////////////////////////////////////////////////
+    // .ngx-datatable.bootstrap .datatable-body .datatable-body-row {
+    //     vertical-align: top;
+    //     border-top: 1px solid grey;
+    // }
+    // ///////////////////////////////////////////////////////////////////////////////////////////////////
+    // .male-row {
+    //     background-color: rgb(6, 240, 201) !important;
+    // }
+    // // .female-row {
+    // //     background-color: rgb(0, 26, 255) !important;
+    // // }
+    // .datatable-header-cell {
+    //     color: #227da0;
+    //     font-size: 16px;
+    //     font-weight: bold;
+    //     font-family: "Arial";
+    //     // background-color:#181b24 !important;
+    // }
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    .datatable-header {
+        height: unset !important;
+    }
+    .ngx-datatable.bootstrap .datatable-header {
+        // vertical-align: bottom;
+        // padding: 0.0rem !important;
+        // border-bottom: 1px solid grey;
+        border-left: 1px solid grey;
+        border-right: 1px solid grey;
+        background-color: rgba(128, 128, 128, 0.507);
+        border-top: 1px solid grey;
+    }
+    .datatable-header-cell {
+        color: #227da0;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: "Arial";
+        top: 3px;
+    }
+    .ngx-datatable.bootstrap .datatable-body .datatable-body-row .datatable-body-cell {
+        // text-align: left;
+        // vertical-align: top;
+        // border-left: 1px solid #000;
+        // border-right: 1px solid #000;
+        border-top: 1px solid grey;
+    }
+}

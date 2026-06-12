@@ -1,0 +1,89 @@
+<ion-header>
+    <ion-navbar color="gray">
+        <button class="navigation_hover" ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+        <ion-buttons end>
+            <button ion-button (click)="save(user)" style="color:  #f5f5f5;font-weight: bold;font-family: Arial" clear>Save</button>
+        </ion-buttons>
+
+    </ion-navbar>
+</ion-header>
+
+
+
+<!-- <ion-content padding style="background-color: #eeeded;"> -->
+<ion-content fullscreen style="background-color: #eeeded;">
+    <br>
+    <ion-item>
+        <ion-label>User Name : </ion-label>
+        <ion-input type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Password : </ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <br>
+    <ngx-datatable class="fullscreen" [ngClass]="tablestyle" 
+    [rows]="user$ | async" [columnMode]="'flex'" 
+    [loadingIndicator]="loading" [sortType]="'multi'"
+    [reorderable]="false" [rowHeight]="50" [headerHeight]="50" 
+    [summaryPosition]="'top'">
+
+        <ngx-datatable-column [flexGrow]="1">
+            <ng-template ngx-datatable-header-template>
+                <span style="margin-left: 10px">Name</span>
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <span style="margin-left: 10px"> {{row.name}} </span>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [flexGrow]="1">
+            <ng-template ngx-datatable-header-template>
+                <span>Password</span>
+            </ng-template>
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <span> {{row.password}} </span>
+            </ng-template>
+            
+        </ngx-datatable-column>
+
+        <!-- <ngx-datatable-column name="Name" [flexGrow]="1"></ngx-datatable-column>
+        <ngx-datatable-column name="Password" [flexGrow]="1"></ngx-datatable-column> -->
+
+        <!-- https://devdactic.com/ionic-datatable-ngx-datatable/ -->
+        <!-- https://github.com/swimlane/ngx-datatable/issues/630 -->
+        <!-- https://stackoverflow.com/questions/48906898/set-fixed-height-for-ngx-datatable-in-angular-4 -->
+
+        <ngx-datatable-column [resizeable]="false" [flexGrow]="0.4" [sortable]="false">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <ion-buttons end>
+                    <button no-margin ion-button full large style="color: #757575; background-color: transparent" (click)="edit(row)" class="btn_col">
+                                      <ion-icon ios="ios-create" md="md-create"></ion-icon>
+                                    </button>
+                </ion-buttons>
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [resizeable]="false" [flexGrow]="0.5" [sortable]="false">
+            <ng-template ngx-datatable-header-template>
+                <!-- <ion-buttons end> -->
+                <ion-icon name="bulb" style="font-size: 30px" (click)="switchStyle()"></ion-icon>
+                <!-- </ion-buttons> -->
+            </ng-template>
+
+
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                <button no-margin ion-button full large style="color: #757575;  background-color: transparent" (click)="delete_user(row)" class="btn_col">
+                                  <ion-icon name="md-trash"></ion-icon>
+                                </button>
+            </ng-template>
+        </ngx-datatable-column>
+    </ngx-datatable>
+
+
+</ion-content>

@@ -1,0 +1,26 @@
+<!-- <div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+    <div class="flb">
+        <div class="Aligner-item Aligner-item--top"></div>
+        <img src="assets/imgs/gow_1.png" style="width: 200px;height: auto;">
+        <div class="Aligner-item Aligner-item--bottom"></div>
+    </div>
+</div> -->
+
+
+<ion-menu persistent="true" [content]="content" (ionClose)="collapseMenuOptions()">
+    <ion-header>
+        <ion-toolbar color="gray">
+            <!-- <ion-title>{{ (sideMenuSettings.accordionMode ? 'Accordion' : 'Default') + ' menu' }}</ion-title> -->
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+
+        <!-- Side Menu -->
+        <side-menu-content [settings]="sideMenuSettings" [options]="options" (selectOption)="selectOption($event)"></side-menu-content>
+
+    </ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

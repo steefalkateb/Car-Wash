@@ -1,0 +1,239 @@
+page-details-sales {
+    font-family: "Hacen Tunisia Lt";
+    .col-50 {
+        display: flex;
+        // height: 280px;
+    }
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    .btn_col {
+        box-shadow: none;
+        height: 45px;
+        bottom: 2px;
+    }
+    // https://forum.ionicframework.com/t/ion-input-green-line-when-type-number/69750/2
+    // .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+    // .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+    //     border-bottom-color: transparent;
+    //     box-shadow: inset 0 -1px 0 0 #dedede;
+    // }
+    // .item-md.item-input.input-has-focus .item-inner {
+    //     box-shadow: none;
+    // }
+    // //////////////////////////////////////////////////////////////////////
+    // .datatable-header {
+    //     height: unset !important;
+    // }
+    // .ngx-datatable.bootstrap .datatable-header {
+    //     // vertical-align: bottom;
+    //     // padding: 0.0rem !important;
+    //     // border-bottom: 1px solid grey;
+    //     border-left: 1px solid grey;
+    //     border-right: 1px solid grey;
+    //     background-color: rgba(128, 128, 128, 0.507);
+    //     border-top: 1px solid grey;
+    // }
+    // .datatable-header-cell {
+    //     color: #227da0;
+    //     font-size: 16px;
+    //     font-weight: bold;
+    //     font-family: "Arial";
+    //     top: 3px;
+    // }
+    // .ngx-datatable.bootstrap .datatable-body .datatable-body-row .datatable-body-cell {
+    //     // text-align: left;
+    //     // vertical-align: top;
+    //     // border-left: 1px solid #000;
+    //     // border-right: 1px solid #000;
+    //     border-top: 1px solid grey;
+    // }
+    .total_hidden {
+        visibility: hidden;
+    }
+    .total_show {
+        visibility: visible;
+    }
+    //////////////////////////////////////////////////////////////////////////////
+    @media print {
+        /////////////////////////////////////////////////
+        // تطبع كامل الصفحة 
+        // -webkit-print-color-adjust: exact !important;
+        /////////////////////////////////////////////////
+        .no-print,
+        .no-print * {
+            display: none !important;
+        }
+        // background-color: transparent !important;
+        // -webkit-print-color-adjust: exact;
+        -webkit-print-color-adjust: exact !important;
+        // .aa {
+        //     top: 0;
+        //     bottom: 0;
+        //     left: 0;
+        //     right: 0;
+        //     width: auto;
+        //     overflow-x: scroll;
+        //     // margin-left: 50px;
+        //     overflow-y: visible;
+        //     padding-bottom: 1px;
+        // }
+        // thead {
+        //     color: #227da0;
+        //     background-color: rgba(128, 128, 128, 0.507);
+        // }
+        //     th {
+        //         padding: 0 5px;
+        //         background-color: rebeccapurple;
+        //     }
+        //     td {
+        //         padding: 0 5px;
+        //     }
+        //     table {
+        //         border-top: 1px solid grey;
+        //         width: 100%;
+        //         margin: 0;
+        //         padding: 0;
+        //         border-collapse: collapse;
+        //         border-spacing: 0;
+        //     }
+        //     table tr {
+        //         border: 1px solid gray;
+        //     }
+        //     table th,
+        //     table td {
+        //         text-align: center;
+        //     }
+        //     table th {
+        //         text-transform: uppercase;
+        //         font-size: 13px !important;
+        //         letter-spacing: 1px;
+        //     }
+        // }
+        // .aa {
+        //     position: absolute;
+        //     top: 0;
+        //     bottom: 0;
+        //     left: 0;
+        //     right: 0;
+        //     width: auto;
+        //     overflow-x: scroll;
+        //     // margin-left: 50px;
+        //     overflow-y: visible;
+        //     padding-bottom: 1px;
+        // }
+        // th {
+        //     padding: 0 5px;
+        // }
+        // td {
+        //     padding: 0 5px;
+        // }
+        // thead {
+        //     color: #227da0 !important;
+        //     font-weight: bold !important;
+        //     font-family: Arial !important;
+        //     // top: 5px;
+        //     background-color: rgba(128, 128, 128, 0.507);
+        //     /////
+        //     // border-left: 2px solid #4646468f;
+        //     // border-right: 2px solid #4646468f;
+        //     border-top: 2px solid #4646468f;
+        //     border-bottom: 2px solid #4646468f;
+        // }
+        // tbody {
+        //     tr:nth-child(even) {
+        //         background-color: #46464625;
+        //     }
+    }
+    // thead th {
+    //     font-size: 150px;
+    // }
+    // table {
+    //     // border: 1px solid #ccc;
+    //     // border: 1px solid #ccc;
+    //     width: 100%;
+    //     // margin: 0;
+    //     // padding: 0;
+    //     // border-collapse: collapse;
+    //     // border-spacing: 0;
+    // }
+    // table tr {
+    //     border: 1px solid #4646468f;
+    // }
+    // table th,
+    // table td {
+    //     text-align: center;
+    //     padding: 5px 0 5px 0;
+    // }
+    // table th {
+    //     text-transform: uppercase;
+    //     font-size: 14px !important;
+    //     // letter-spacing: 1px;
+    //     padding: 0 5px 0 5px;
+    // }
+    // .color_show {
+    //     tbody {
+    //         // لتغيير لون سطر اي سطر لا
+    //         // https://www.w3schools.com/css/css_table.asp
+    //         tr:nth-child(even) {
+    //             background-color: #227ca054;
+    //         }
+    //     }
+    //     background-color: #46464625;
+    // }
+    // .code {
+    //     width: 5% !important;
+    // }
+    // .item_name {
+    //     width: 25% !important;
+    // }
+    // .group_name {}
+    //////////////////////////////////
+    #customers {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+    #customers td,
+    #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+        font-size: 14px;
+    }
+    #customers tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    #customers tr:hover {
+        background-color: #ddd;
+    }
+    #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: #227ca0 !important;
+        color: white;
+    }
+    .under_td {
+        // height: 50px;
+        background-color: #464646 !important;
+        // padding-top: 10px;
+        color: #227ca0 !important;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: Arial;
+    }
+    .item_name {
+        // https: //stuyhsdesign.wordpress.com/css/css-table%E2%80%A8-styling/
+        width: 25% !important;
+    }
+    .group_name {
+        width: 30% !important;
+    }
+    .Time {
+        width: 7% !important;
+    }
+    .code {
+        width: 2% !important;
+    }
+}

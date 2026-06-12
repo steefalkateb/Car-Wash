@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-navbar color="gray" hideBackButton>
+        <ion-buttons end>
+            <button ion-button (click)="closeModal()" style="color:  #f5f5f5;font-weight: bold;" clear>Hold</button>
+        </ion-buttons>
+
+        <ion-buttons end>
+            <button ion-button (click)="clear()" style="color:  #f5f5f5;font-weight: bold;" clear>Clear</button>
+        </ion-buttons>
+
+        <ion-buttons end>
+            <button ion-button (click)="closeModal()" style="color:  #f5f5f5;font-weight: bold;" clear>Close</button>
+        </ion-buttons>
+
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding style="background-color: #eeeded;">
+    <!-- https://ionicframework.com/docs/v3/api/components/refresher/Refresher/ -->
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
+
+
+    <ion-grid>
+
+        <ion-item *ngFor="let item of items" style="background-color: transparent">
+            <ion-row>
+                <!-- https://forum.ionicframework.com/t/customize-actionsheet-ionic-3/134883 -->
+                <ion-col col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 style="text-align: left">
+                    <img src={{item.imageurl}} style="width: 60px;height:30px;top: 5px" />
+                    <span style="margin-left: 40px;color: #010101;font-family: Hacen Tunisia Lt">{{item.itemname}}</span>
+                </ion-col>
+
+                <ion-col col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 style="text-align: right;color: #1f1e1e;">
+                    {{item.price}} <button style="color: #d2504d;background-color: transparent;font-size:18px" (click)="del(item.id)"><ion-icon name="close-circle"></ion-icon></button>
+                </ion-col>
+            </ion-row>
+
+        </ion-item>
+
+        <ion-row>
+            <ion-col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 style="text-align: right;">
+                <span>Subtotal :</span>
+                <span style="float: right;right: 24px;width: 80px;">{{Subtotal}}</span>
+                <br>
+                <span style="color: #a7afb6;">Tax :</span>
+                <span style="float: right;right: 24px;width: 80px;">{{Tax}}</span>
+                <br>
+                <span style="color: #000000;font-weight: bold;">Total :</span>
+                <span style="font-weight: bold;float: right;right: 24px;width: 85px;">{{Total}}</span>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <!-- <button ion-button (click)="connect_to_printer()">connect to printer</button> -->
+    <!-- <button ion-button (click)="print_text()">print_text</button> -->
+
+</ion-content>
+
+<ion-footer text-center no-border transparent>
+    <button ion-button (click)="done()" style="background-color:#27a1c5;width: 95%;font-weight: bold;" round>Done</button>
+</ion-footer>
