@@ -37,8 +37,7 @@ A web-based management system for car wash businesses — built with Ionic & Ang
 | Angular | UI Components |
 | TypeScript | Programming Language |
 | SCSS | Styling |
-| MySQL | Database |
-| Laravel | Backend API |
+| Firebase | Database |
 
 ---
 
