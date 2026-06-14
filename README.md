@@ -1,19 +1,48 @@
-# Carwash Service App
+# 🚗 Carwash Service App
 
-<table border="0">
- <tr>
-    <td>
-      <img src="https://github.com/steefalkateb/Car-Wash/blob/main/src/assets/Screenshot%202026-06-09%20at%2011.27.51%20PM.png" width="400">
-    </td>
-    <td>
-      <img src="https://github.com/steefalkateb/Car-Wash/blob/main/src/assets/Screenshot%202026-06-09%20at%2011.29.00%20PM.png" width="400">
-    </td>
-   <td>
-      <img src="https://github.com/steefalkateb/Car-Wash/blob/main/src/assets/Screenshot%202026-06-09%20at%2011.29.13%20PM.png" width="400">
-    </td>
-    <td>
-      <img src="https://github.com/steefalkateb/Car-Wash/blob/main/src/assets/Screenshot%202026-06-09%20at%2011.29.30%20PM.png" width="400">
-    </td>
-</tr>
+A web-based management system for car wash businesses — built with Ionic & Angular.
 
+---
+
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td><img src="src/assets/Screenshot 2026-06-09 at 11.27.51 PM.png" width="100%"></td>
+    <td><img src="src/assets/Screenshot 2026-06-09 at 11.29.00 PM.png" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="src/assets/Screenshot 2026-06-09 at 11.29.13 PM.png" width="100%"></td>
+    <td><img src="src/assets/Screenshot 2026-06-09 at 11.29.30 PM.png" width="100%"></td>
+  </tr>
 </table>
+
+---
+
+## ✨ Features
+
+- 💰 Sales management and tracking
+- 📊 Detailed reports and statistics
+- 👥 Customer management
+- 🧾 Invoice generation
+- 📦 Service & pricing management
+
+---
+
+## 🛠️ Technologies
+
+| Technology | Usage |
+|------------|-------|
+| Ionic | Frontend Framework |
+| Angular | UI Components |
+| TypeScript | Programming Language |
+| SCSS | Styling |
+| MySQL | Database |
+| Laravel | Backend API |
+
+---
+
+## 👨‍💻 Developer
+
+**Mustafa Alkateb** — Software Developer · Web & Mobile  
+🔗 [github.com/steefalkateb](https://github.com/steefalkateb)
